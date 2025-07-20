@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500&display=swap');
+
+:root {
+  --color-primary: #040D4A;
+}
+
+.Herotitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 3.125rem;
+  /* 50px */
+  color: var(--color-primary);
+line-height: 4.6875rem;
+  /* 75px */
+}
+
+.title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  /* 28px */
+  color: var(--color-primary);
+}
+
+.text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  /* 16px */
+  color: var(--color-primary);
+}
+
+.subtext {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  /* 14px */
+  color: var(--color-primary);
+}
+
+.subtextBold {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--color-primary);
+}
