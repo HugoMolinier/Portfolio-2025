@@ -1,11 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, ReactNode } from "react";
 import {
   SizeButton,
   VariantButton,
   getButtonStyle,
 } from "@component/ui/Button/Button.style";
 
+import Icon from "@component/ui/Icon/Icon";
+import { IconName } from "@component/ui/Icon/icons";
 type ButtonProps = {
   size?: SizeButton;
   variant?: VariantButton;
@@ -13,6 +15,8 @@ type ButtonProps = {
   viewStyle?: React.CSSProperties;
   accessibilityLabel?: string;
   onClick?: () => void;
+  icon?: IconName;
+  iconPosition?: "left" | "right";
 };
 
 export default function Button({
@@ -22,6 +26,8 @@ export default function Button({
   viewStyle,
   accessibilityLabel,
   onClick,
+  icon,
+  iconPosition = "left",
 }: ButtonProps) {
   const [hovered, setHovered] = useState(false);
   const [clicked, setClicked] = useState(false);
@@ -44,7 +50,18 @@ export default function Button({
       onMouseUp={() => setClicked(false)} // click relâché
       onBlur={() => setClicked(false)} // si focus perdu (ex : tab)
     >
-      {text}
+      {icon && iconPosition === "left" && (
+        <Icon name={icon} color={buttonStyle.color} size={14} />
+      )}
+      <span
+        className={size === "md" ? "subText" : "subText"}
+        style={{ color: buttonStyle.color }}
+      >
+        {text}
+      </span>
+      {icon && iconPosition === "right" && (
+        <Icon name={icon} color={buttonStyle.color} size={18} />
+      )}
     </button>
   );
 }

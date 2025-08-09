@@ -3,51 +3,77 @@
 import React from "react";
 import Button from "@component/ui/Button/Button";
 type NavBarProps = {
-  fixed?: boolean;
+  isFixed?: boolean;
 };
 
-export default function NavBar({ fixed = false }: NavBarProps) {
+export default function NavBar({ isFixed = true }: NavBarProps) {
   return (
-    <nav
+    <div
       style={{
-        position: fixed ? "fixed" : "static",
+        position: isFixed ? "fixed" : "static",
         top: 0,
+        zIndex: 10,
+        opacity: 0.9,
         left: 0,
         right: 0,
-        padding: "0.75rem 305px",
-        backgroundColor: "#FEFEFE",
-        gap: "auto",
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        boxShadow: "0 1px 1px rgba(0, 0, 0, 0.1)",
+        backgroundColor: "#FFF",
+        boxShadow: "0 1px 1px rgba(0, 0, 0, 0.03)",
       }}
     >
-      <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
-        <img
-          src="/image/profilPicture.png"
-          alt="Logo"
-          style={{
-            width: "2.5rem", // 40px
-            height: "2.5rem",
-            borderRadius: "50%",
-            border: "1px solid #040D4A",
-          }}
-        />
-        <span className="subtextBold">MOLINIER Hugo</span>
-      </div>
-      <div style={{ display: "flex", alignItems: "center", gap: "2.1875rem" }}>
-        <span className="subtext">A propos</span>
-        <span className="subtext">Projets</span>
-        <span className="subtext">Compétences</span>
-        <span className="subtext">Parcours</span>
-        <Button
-          size="md"
-          text="Mon CV"
-          accessibilityLabel="Voir plus d'informations"
-          onClick={() => console.log("clicked")}
-        />
-      </div>
-    </nav>
+      <nav
+        style={{
+          maxWidth: "920px",
+          margin: "0 auto",
+
+          padding: "12px 0px",
+
+          gap: "auto",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+          <a href="/">
+            <img
+              src="/image/profilPicture.png"
+              alt="Logo"
+              style={{
+                width: "32px", // 40px
+                height: "32px",
+                border: "0.5px solid #040D4A",
+                borderRadius: 200,
+              }}
+            />
+          </a>
+          <a href="/" className="subtextBoldlink">
+            Molinier Hugo
+          </a>
+        </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "36px" }}>
+          <a href="#projets" className="subtextBoldlink">
+            Projets
+          </a>
+          <a href="#competences" className="subtextBoldlink">
+            Compétences
+          </a>
+          <a href="#parcours" className="subtextBoldlink">
+            Parcours
+          </a>
+          <Button
+            icon="download"
+            size="md"
+            text="Mon CV"
+            accessibilityLabel="Voir plus d'informations"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/file/CV_MOLINIER_Hugo.pdf";
+              link.download = "CV_Hugo_Molinier.pdf";
+              link.click();
+            }}
+          />
+        </div>
+      </nav>
+    </div>
   );
 }

@@ -3,19 +3,20 @@ export type VariantButton = "primary" | "secondary";
 
 const sizeStyles = {
   md: {
-    padding: "5px 14px",
-    fontSize: "14px",
+    padding: "4px 10px",
   },
   lg: {
     padding: "8px 20px",
-    fontSize: "14px",
-    fontWeight: "600",
   },
 };
 
 const variantStyles = (clicked: boolean, hovered: boolean) => ({
   primary: {
-    backgroundColor: clicked ? "#8990C1" : hovered ? "#06136F" : "#040D4A",
+    backgroundColor: clicked
+      ? "rgba(81, 97, 11,0.6)"
+      : hovered
+      ? "#51600b"
+      : "#040D4A",
     color: "#fff",
     border: "none",
   },
@@ -37,6 +38,11 @@ export const getButtonStyle = (
     ...variantStyles(clicked, hovered)[variant],
     borderRadius: "25px",
     cursor: "pointer",
+    gap: "4px",
+    boxShadow: "0 4px 4px rgba(4, 13, 74, 0.25)",
     transition: "all 0.1s ease",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   };
 };

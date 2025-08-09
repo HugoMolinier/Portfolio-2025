@@ -1,46 +1,115 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap');
 :root {
   --color-primary: #040D4A;
 }
 
-.Herotitle {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 3.125rem;
-  /* 50px */
-  color: var(--color-primary);
-line-height: 4.6875rem;
-  /* 75px */
+body::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
 }
 
-.title {
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+    margin: 0;
+      padding: 0;
+  letter-spacing: -3.2px;
+  color: var(--color-primary);
+line-height: 140%;  
+}
+
+h2 {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 2%;
+      margin: 0;
+        padding: 0;
+  font-size: 26px;
   /* 28px */
   color: var(--color-primary);
 }
 
-.text {
+h3 {
   font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  /* 16px */
-  color: var(--color-primary);
+    font-weight: 500;
+    font-size: 18px;
+          margin: 0;
+            padding: 0;
+    line-height: normal;
+    /* 14px */
+    color: var(--color-primary);
+}
+/*----------------------------------*/
+p, li{
+  font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    line-height: 150%;
+        margin: 0;
+          padding: 0;
+    /* 16px */
+    color: var(--color-primary);
 }
 
+.textlink {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Hover uniquement si c'est un lien */
+.textlink:hover {
+  color: #51600b;
+  text-decoration: underline;
+}
+/*----------------------------------*/
 .subtext {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 14.4px;
+  line-height: normal;
   /* 14px */
   color: var(--color-primary);
 }
 
-.subtextBold {
+
+.subtextBoldlink {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 0.875rem;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: normal;
   color: var(--color-primary);
+    text-decoration: none;
+      transition: color 0.2s ease;
+}
+.subtextBoldlink:hover {
+  color: #51600b;
+  text-decoration: underline;
+}
+
+.mintext {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: normal;
+  color: var(--color-primary);
+}
+
+.toc-link {
+  display: block;
+
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.toc-link:hover {
+  color: rgba(4, 13, 74, 1);
 }
