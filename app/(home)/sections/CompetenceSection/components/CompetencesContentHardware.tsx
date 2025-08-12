@@ -38,7 +38,7 @@ export const categories = [
   },
 ];
 
-export default function CompetencesContentHardwar() {
+export default function CompetencesContentHardware() {
   return (
     <div
       style={{

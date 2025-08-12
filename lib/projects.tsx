@@ -1,4 +1,5 @@
 import EngiePage from "@/projects/DetailProject/EngiePage";
+import pmr from "@/projects/DetailProject/PMR";
 export const projects = {
   engie: {
     background: "linear-gradient(67deg, #CDCEED 0%, #E4E692 50%, #B2C073 100%)",
@@ -10,7 +11,8 @@ export const projects = {
         "Front développeur : améliorer le design global de l’application mobile en React Native. Implémentation du dark mode et de composants.",
     },
     image: "/image/engie mock.png",
-    component: <EngiePage />,
+    component: EngiePage,
+
     sections: [
       { id: "introduction", label: "Introduction" },
       { id: "decouverte", label: "Découverte" },
@@ -31,6 +33,7 @@ export const projects = {
         "Applications pour PMR et agents pour scanner et suivre un trajet multimodal. Développement, hébergement et build de l'application.",
     },
     image: "/image/image_cfm.png",
+    component: pmr,
   },
 
   taxonsLibrary: {

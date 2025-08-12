@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import CompetenceBar from "./components/CompetencesBar";
 import CompetencesContentSkill from "./components/CompetencesContentSkill";
-import CompetencesContentHardwar from "./components/CompetencesContentHardwar";
+import CompetencesContentHardware from "./components/CompetencesContentHardware";
 import CompetencesContentLangue from "./components/CompetencesContentLangue";
 export default function Competence() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -62,7 +62,7 @@ export default function Competence() {
             }}
           />
           {activeIndex === 0 && <CompetencesContentSkill />}
-          {activeIndex === 1 && <CompetencesContentHardwar />}
+          {activeIndex === 1 && <CompetencesContentHardware />}
           {activeIndex === 2 && <CompetencesContentLangue />}
         </div>
       </section>

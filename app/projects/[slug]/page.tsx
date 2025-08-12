@@ -5,19 +5,31 @@ import { notFound } from "next/navigation";
 import { projects } from "@lib/projects";
 import Card from "@component/ui/Card/Card";
 import TableOfContents from "./TableOfContents";
-
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export default function ProjectDetail({ params }: Props) {
-  const project = projects[params.slug];
+  const [realParams, setRealParams] = React.useState<{ slug: string } | null>(
+    null
+  );
+
+  React.useEffect(() => {
+    params.then(setRealParams);
+  }, [params]);
+
+  if (!realParams) {
+    return <div style={{ height: "1000px" }}>Loading...</div>;
+  }
+
+  const project = projects[realParams.slug];
 
   if (!project) {
     return notFound();
   }
+
+  const Component = project.component;
   const sectionLinks = project.sections ?? [];
-  console.log(sectionLinks);
 
   return (
     <section
@@ -79,7 +91,7 @@ export default function ProjectDetail({ params }: Props) {
             {project.text.minText}
           </span>
           <h2>{project.text.title}</h2>
-          {project?.component}
+          {Component && <Component />}
         </div>
       </div>
     </section>
