@@ -11,11 +11,10 @@ export default function ProjectsSection() {
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        padding: "0 0 38px 0",
       }}
     >
       {Object.entries(projects).map(([key, project]) => (
-        <div key={key} style={{ padding: "20px 0px 52px 0px" }}>
+        <div key={key} style={{ paddingBottom: " 80px" }}>
           <Card
             background={project.background}
             tagList={project.tagList}

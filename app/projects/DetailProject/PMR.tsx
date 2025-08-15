@@ -40,13 +40,12 @@ const EngiePage = () => (
         maîtriser l’ensemble du cycle de vie du projet.
       </p>
     </section>
-
     <section id="decouverte" style={sectionStyle}>
       <header style={{ marginBottom: 20 }}>
         <h2>Découverte</h2>
       </header>
       <p>
-        Durant le premier semestre, j’ai intégré une équipe pour concevoir et
+        Durant le cinquième semestre, j’ai intégré une équipe pour concevoir et
         développer le backend, en participant aussi aux décisions techniques
         pour le front.
       </p>
@@ -78,247 +77,166 @@ const EngiePage = () => (
         communication inter-équipes.
       </p>
     </section>
-
     <section id="missions" style={sectionStyle}>
       <header style={{ marginBottom: 20 }}>
-        <h2>Missions</h2>
+        <h2>Semestre 1 : Conception et développement du backend</h2>
       </header>
-      <p>
-        Tout au long du projet, j’ai toujours occupé le rôle de développeur
-        backend. J’ai contribué à la conception, au développement et à la
-        maintenance des services backend, en veillant à leur performance, leur
-        fiabilité et leur évolutivité. Voici les principales missions réalisées
-        :
-      </p>
-
       <article>
-        <header style={{ marginBottom: 20, marginTop: 40 }}>
-          <h3>1er Semestre</h3>
+        <p>
+          Dans ce projet, de septembre 2024 à janvier 2025, j’ai mis en place
+          une architecture Node.js structurée autour de models, middlewares et
+          controllers. J’ai développé des services REST couvrant les principaux
+          domaines fonctionnels du projet : gestion des utilisateurs,
+          réservations, voyages, authentification biométrique, suivi des
+          bagages, notifications et assistance PMR. Mon travail a couvert la
+          planification, la réalisation technique et la validation, tout en
+          garantissant performance et fiabilité.
+        </p>
+        <header style={{ marginBottom: 20, marginTop: 20 }}>
+          <h3>Réflexion et Création de l'ensemble de la base de données</h3>
         </header>
         <p>
-          Dans le cadre de l’uniformisation de l’interface, j’ai participé à la
-          refonte complète des composants d’interface mobile en suivant les
-          standards du design system Fluid mis en place chez ENGIE :
-        </p>
-        <ul>
-          <li>
-            Recréation complète des composants (boutons, inputs, tags, badges,
-            icônes...) selon le design system Fluid.
-          </li>
-          <li>
-            Intégration des Fluid Tokens (couleurs, espacements, tailles) pour
-            garantir la cohérence et la compatibilité avec les futurs modes
-            (clair/sombre).
-          </li>
-          <li>
-            Ajout de surcouches spécifiques à Vianeo, tout en gardant les
-            composants génériques et réutilisables.
-          </li>
-          <li>Documentation complète + mise en place de tests unitaires.</li>
-          <li style={{ listStyle: "none", marginTop: 20 }}>
-            <img
-              src="/image/engie/image3.png"
-              width="80%"
-              style={{ borderRadius: 8 }}
-              alt="Aperçu du projet ENGIE"
-            />
-          </li>
-        </ul>
-        <p>
-          Cela a permis d’ajouter des états variés aux composants (pressé, avec
-          ou sans icône, différentes variantes et emphases) tout en facilitant
-          leur intégration pour les évolutions futures.
-        </p>
-      </article>
-
-      <article>
-        <header style={{ marginBottom: 20, marginTop: 40 }}>
-          <h3>Gestion dynamique des BottomSheets promotionnelles</h3>
-        </header>
-        <p>
-          Pour une campagne promotionnelle, j’ai développé un système de
-          BottomSheets dynamiques pouvant être contrôlées à distance, et qui
-          s’affichent automatiquement en fonction du contexte utilisateur :
-        </p>
-        <ul>
-          <li>
-            Création d’un composant React Native basé sur @gorhom/bottom-sheet
-            entièrement configurable et multilingue.
-          </li>
-          <li>
-            Développement d’un système d’affichage contextuel de BottomSheets à
-            partir de données récupérées en JSON via un backend AWS.
-          </li>
-          <li>
-            Intégration d’un système de file d’attente pour l’enchaînement
-            fluide de plusieurs BottomSheets sur la page home.
-          </li>
-          <li style={{ listStyle: "none", marginTop: 20 }}>
-            <div style={imgContainerStyle}>
-              <img
-                src="/image/engie/engie_bottom.png"
-                alt="BottomSheet 1"
-                style={imageStyle}
-              />
-              <img
-                src="/image/engie/engie_bottom2.png"
-                alt="BottomSheet 2"
-                style={imageStyle}
-              />
-              <img
-                src="/image/engie/engie_bottom3.png"
-                alt="BottomSheet 3"
-                style={imageStyle}
-              />
-            </div>
-          </li>
-        </ul>
-        <p>
-          Cela a permis de proposer des pop-ups promotionnels personnalisés,
-          réactifs au contexte utilisateur, facilement configurables à distance,
-          et de gérer efficacement l’affichage simultané et successif de
-          l’ensemble des BottomSheets de l’application, garantissant ainsi une
-          expérience utilisateur fluide et maîtrisée.
-        </p>
-      </article>
-
-      <article>
-        <header style={{ marginBottom: 20, marginTop: 40 }}>
-          <h3>Implémentation du Dark Mode global</h3>
-        </header>
-        <p>
-          Bien que les composants aient été adaptés pour gérer les deux thèmes
-          via les design tokens (clair et sombre), les pages de l’application
-          utilisaient encore des styles en dur. Mon objectif a donc été
-          d’étendre la logique de thème à l’ensemble des écrans afin de garantir
-          une expérience utilisateur homogène et cohérente, quel que soit le
-          mode choisi.
-        </p>
-        <ul>
-          <li>
-            Mise en place d’un provider de thème (React Context) pour appliquer
-            automatiquement le bon thème selon les préférences système ou
-            utilisateur.
-          </li>
-          <li>
-            Refonte de tous les images pour les passer en svg en exploitant les
-            tokens dynamiques.
-          </li>
-          <li>
-            Système intelligent de remplacement des icônes/images selon le thème
-            actif.
-          </li>
-          <li style={{ listStyle: "none", marginTop: 20 }}>
-            <div style={imgContainerStyle}>
-              <img
-                src="/image/engie/engie_dark1.png"
-                alt="Dark Mode 1"
-                style={imageStyle}
-              />
-              <img
-                src="/image/engie/engie_dark2.png"
-                alt="Dark Mode 2"
-                style={imageStyle}
-              />
-              <img
-                src="/image/engie/engie_dark3.png"
-                alt="Dark Mode 3"
-                style={imageStyle}
-              />
-            </div>
-          </li>
-        </ul>
-        <p>
-          Cette modernisation a permis de livrer une application mobile plus
-          esthétique, plus accessible et plus alignée avec les standards
-          d’expérience utilisateur actuels.
-        </p>
-      </article>
-    </section>
-    <section id="resultats-impact" style={{ paddingTop: 60 }}>
-      <header style={{ marginBottom: 20 }}>
-        <h2>Résultats</h2>
-      </header>
-      <p>
-        Les améliorations apportées ont significativement transformé
-        l’application Vianeo. L’interface est désormais plus cohérente, moderne
-        et agréable, ce qui a nettement réduit les retours négatifs liés à
-        l’ergonomie.
-      </p>
-      <p>
-        Tous mes travaux sont déployés en production, garantissant ainsi une
-        amélioration directe de l’application, cependant, la fonctionnalité du
-        Dark Mode est actuellement activée sous feature flag, permettant un
-        déploiement progressif et contrôlé.
-      </p>
-    </section>
-
-    <section id="challenges" style={{ paddingTop: 60 }}>
-      <header style={{ marginBottom: 20 }}>
-        <h2>Challenges et solutions</h2>
-      </header>
-      <p>
-        Lors de ce stage, j’ai été confronté à plusieurs défis techniques
-        importants, pour lesquels j’ai dû concevoir et mettre en place des
-        solutions efficaces afin d’assurer une expérience utilisateur optimale
-        et une architecture robuste.
-      </p>
-
-      <article style={{ marginTop: 20 }}>
-        <header style={{ marginBottom: 8 }}>
-          <h3>Synchronisation des BottomSheets</h3>
-        </header>
-        <p>
-          J’ai dû concevoir un système de file d’attente pour afficher plusieurs
-          promotions successivement sans bloquer l’expérience utilisateur. Cette
-          solution a permis un affichage fluide et sans conflit.
-        </p>
-      </article>
-
-      <article style={{ marginTop: 20 }}>
-        <header style={{ marginBottom: 8 }}>
-          <h3>Gestion du Dark Mode</h3>
-        </header>
-        <p>
-          Le code initial mélangeait styles statiques et dynamiques. J’ai
-          centralisé la logique de thème via React Context et refondu tous les
-          styles pour une homogénéité parfaite.
-        </p>
-      </article>
-    </section>
-
-    <section id="apprentissage" style={{ paddingTop: 60 }}>
-      <header style={{ marginBottom: 20 }}>
-        <h2>Apprentissage</h2>
-      </header>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <p>
-          Ce projet m’a permis d’approfondir ma maîtrise de React Native,
-          notamment les hooks, les composants dynamiques, la navigation et la
-          gestion du thème. J’ai développé une meilleure compréhension des
-          design systems comme Fluid, et des enjeux liés au développement à
-          l’échelle. J’ai aussi travaillé pour la première fois en méthode
-          Agile, avec la gestion de backlog, des sprints réguliers et des
-          échanges constants avec des profils variés. Ce contexte m’a permis de
-          renforcer mon autonomie, ma rigueur, ainsi que mon sens du produit.
-        </p>
-        <article style={{ marginTop: 20 }}>
-          <header style={{ marginBottom: 8 }}>
-            <h3>En Conclusion</h3>
-          </header>
+          Pour ce projet, j’ai conçu et développé les bases de données et les
+          modèles Node.js afin de gérer efficacement les informations liées aux
+          PMR et à leurs trajets multimodaux. Les données sensibles et
+          structurées, comme les informations personnelles, les handicap et
+          transaction de l’e-wallet, sont stockées dans une base SQL.{" "}
           <p>
-            Ce stage m’a permis de contribuer à une application utilisée
-            quotidiennement par plusieurs milliers d’utilisateurs. Les
-            améliorations apportées ont renforcé la stabilité et l’ergonomie de
-            l’app, tout en posant les bases d’une évolutivité durable grâce au
-            design system Fluid. Ce projet m’a aussi donné une expérience
-            concrète de la collaboration en équipe Agile, ainsi qu’une autonomie
-            accrue dans la gestion de tâches complexes et de découvrir la
-            gestion de plusieurs environnements (prod, préprod et
-            développement).
+            En revanche, les données moins structurées et évolutives, telles que
+            les voyage et resevation, sont gérées via NoSQL (MongoDB ).
           </p>
-        </article>
-      </div>
+        </p>
+        <br />
+        <p>
+          Le projet nécessitait également l’intégration de bases de données
+          externes (pour ce projet, nous avons simulé ces bases pour des raisons
+          budgétaires) :
+        </p>
+        <ul>
+          <li>Air France</li>
+          <li>SNCF / RATP</li>
+          <li>FlixBus</li>
+          <li>Uber</li>
+        </ul>
+        <p>
+          Pour uniformiser les échanges entre ces différentes bases, nous avons
+          utilisé le format Amadeus, le standard officiel de l’industrie du
+          voyage.
+        </p>
+
+        <img
+          src="/image/pmr/Affiche_archi.jpg"
+          width="100%"
+          style={{ borderRadius: 8 }}
+          alt="Aperçu du projet ENGIE"
+        />
+      </article>
+      <article>
+        <header style={{ marginBottom: 20, marginTop: 40 }}>
+          <h3>Développement et gestion des middlewares</h3>
+        </header>
+        <p>
+          Dans notre backend, les middlewares jouent un rôle central pour
+          garantir la sécurité, la cohérence et la fiabilité du système.
+        </p>
+        <ul>
+          <li>
+            <strong>Middleware d’authentification</strong> : gestion des tokens
+            pour vérifier que chaque requête provient d’un utilisateur autorisé.
+          </li>
+          <li>
+            <strong>Middleware de session</strong> : persistance sécurisée des
+            connexions, garantissant que l’utilisateur reste authentifié sur
+            toute la durée de sa session.
+          </li>
+          <li>
+            <strong>Middleware d’erreurs</strong> : uniformisation des réponses
+            API et traitement centralisé des exceptions, pour améliorer la
+            lisibilité et la fiabilité des retours.
+          </li>
+        </ul>
+        <p>
+          Cela a renforcé la sécurité et la fiabilité du backend, tout en
+          facilitant l’extension des fonctionnalités et la maintenance du code.
+          Une fois fait, il a fallu ajouter ce middlewares à chaque route.
+        </p>
+      </article>
+      <article>
+        <header style={{ marginBottom: 20, marginTop: 40 }}>
+          <h3>Mise en place et intégration d’Apache Kafka </h3>
+        </header>
+        <p>
+          Une machine virtuelle dédiée à Kafka est utilisée pour suivre
+          l’avancement du voyage et vérifier la prise en charge du passager à
+          mobilité réduite (PMR) par un agent. L’application se connecte aux
+          topics Kafka dédiés à ces événements, récupère les messages produits
+          par les différents services, puis déclenche les traitements
+          nécessaires pour : Mettre à jour le statut du voyage et confirmer la
+          bonne exécution de l’assistance au PMR.
+        </p>
+      </article>
+      <article>
+        <header style={{ marginBottom: 20, marginTop: 40 }}>
+          <h3>Présentation et démonstration</h3>
+        </header>
+        <p>
+          Lors de la journée portes ouvertes organisée par notre IUT, nous avons
+          présenté notre projet aux visiteurs, élèves et professeurs à travers
+          des démonstrations concrètes. J’ai principalement montré l’application
+          mobile pour les voyageurs PMR et les aspects techniques du projet,
+          tandis que les autres applications (accompagnants, agents, gestion des
+          flux) ont également été exposées. Cette présentation a permis de faire
+          découvrir le fonctionnement de la solution et son architecture, et de
+          recueillir des retours pour améliorer l’expérience utilisateur.
+        </p>
+
+        <img
+          src="/image/pmr/presentation.jpg"
+          width="100%"
+          style={{ borderRadius: 8, margin: 8 }}
+          alt="Aperçu du projet ENGIE"
+        />
+      </article>
+      <header style={{ marginBottom: 20, marginTop: 40 }}>
+        <h2>Semestre 6 : Maintenance et mise en production</h2>
+      </header>
+      <p>
+        Au cours de ce semestre,de janvier à mi-mars, j’ai dû changer de groupe
+        conformément aux consignes, ce qui m’a demandé une forte capacité
+        d’adaptation. J’ai pris en charge la maintenance d’un backend existant,
+        développé par un autre groupe, ce qui impliquait de comprendre
+        rapidement une architecture et un code qui n’étaient pas les miens, et
+        d’apporter des corrections et améliorations tout en respectant la
+        structure initiale.Ma tache à été la maintenance du backend et le le
+        développement de l’APK mobile.
+      </p>
+      <br />
+      <p>
+        Contrairement à mon ancien groupe, celui-ci avait tout mis en place avec
+        Docker, ce qui m’a permis d’acquérir de nouvelles compétences en
+        conteneurisation et déploiement, ainsi que de découvrir une autre façon
+        de structurer et déployer un projet.
+      </p>
+      <img
+        src="/image/pmr/Affiche_pipeline.jpg"
+        width="100%"
+        style={{ borderRadius: 8, margin: 8 }}
+        alt="Aperçu du projet ENGIE"
+      />
+      <br />
+
+      <header style={{ marginBottom: 20, marginTop: 40 }}>
+        <h3>Génération de l’APK</h3>
+      </header>
+      <p>
+        Pour générer l’APK, j’ai d’abord réglé les dépendances dans package.json
+        afin d’intégrer Expo, React Native et les modules essentiels comme la
+        carte, le QR code, la caméra ou le stockage. J’ai ensuite corrigé les
+        problèmes spécifiques rencontrés, assurant ainsi le bon fonctionnement
+        de l’application et la génération réussie de l’APK. Pour avoir enfin le
+        .apk j'ai utilisé EAS (Expo Application Services) pour compiler et
+        générer l’APK de manière fiable.
+      </p>
     </section>
   </main>
 );

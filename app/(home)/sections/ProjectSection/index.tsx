@@ -8,9 +8,8 @@ export default function Project() {
       id="projets"
       style={{
         width: "100%",
-
         scrollMarginTop: "60px",
-        maxWidth: "920px",
+        maxWidth: "960px",
         margin: "0 auto",
         boxSizing: "border-box",
         display: "flex",
@@ -19,11 +18,11 @@ export default function Project() {
     >
       <div
         style={{
-          padding: "56px 5px 24px 5px",
-          borderTop: "1px solid rgba(0, 0, 0, 0.1)",
+          padding: "80px 5px 48px 5px",
           display: "flex",
           gap: 12,
-          alignItems: "flex-end",
+          lineHeight: 1,
+          alignItems: "baseline",
         }}
       >
         <span
@@ -34,7 +33,7 @@ export default function Project() {
         >
           01
         </span>
-        <h3>Projets / Stage</h3>
+        <h3 style={{ margin: 0, lineHeight: 1 }}>Projets / Stage</h3>
       </div>
 
       <CardView />

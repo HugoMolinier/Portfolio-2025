@@ -17,12 +17,12 @@ export default function NavBar({ isFixed = true }: NavBarProps) {
         left: 0,
         right: 0,
         backgroundColor: "#FFF",
-        boxShadow: "0 1px 1px rgba(0, 0, 0, 0.03)",
+        boxShadow: "0 1px 1px rgba(0, 0, 0, 0.05)",
       }}
     >
       <nav
         style={{
-          maxWidth: "920px",
+          maxWidth: "960px",
           margin: "0 auto",
 
           padding: "12px 0px",
@@ -33,14 +33,14 @@ export default function NavBar({ isFixed = true }: NavBarProps) {
           alignItems: "center",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <a href="/">
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <a href="/" style={{ lineHeight: 0 }}>
             <img
               src="/image/profilPicture.png"
               alt="Logo"
               style={{
-                width: "32px", // 40px
-                height: "32px",
+                width: "36px",
+                height: "36px",
                 border: "0.5px solid #040D4A",
                 borderRadius: 200,
               }}
@@ -50,15 +50,9 @@ export default function NavBar({ isFixed = true }: NavBarProps) {
             Molinier Hugo
           </a>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "36px" }}>
-          <a href="#projets" className="subtextBoldlink">
-            Projets
-          </a>
-          <a href="#competences" className="subtextBoldlink">
-            Compétences
-          </a>
-          <a href="#parcours" className="subtextBoldlink">
-            Parcours
+        <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
+          <a href="//" className="subtextBoldlink">
+            A Propos
           </a>
           <Button
             icon="download"

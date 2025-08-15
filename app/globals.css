@@ -1,61 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 :root {
   --color-primary: #040D4A;
+  --color-secondary:#161E47;
 }
-
+body,
+p,
+li,
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-secondary);
+  font-family: 'Inter', sans-serif;
+}
 body::-webkit-scrollbar {
   display: none;
+  color: var(--color-secondary)
   /* Chrome, Safari */
 }
-
+* {
+  box-sizing: border-box;
+}
 h1 {
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
-  font-size: 52px;
-    margin: 0;
-      padding: 0;
-  letter-spacing: -3.2px;
-  color: var(--color-primary);
-line-height: 140%;  
+  font-size: 70px;
+
+  letter-spacing: -2.8px;
+line-height: 120%;  
+  margin: 0;
+    padding: 0;
 }
 
 h2 {
-  font-family: 'Inter', sans-serif;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: 2%;
-      margin: 0;
-        padding: 0;
+letter-spacing: 0.02em;
+  margin: 0;
+    padding: 0;
   font-size: 26px;
   /* 28px */
-  color: var(--color-primary);
 }
 
 h3 {
-  font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 18px;
-          margin: 0;
-            padding: 0;
+    font-size: 18px;margin: 0;
+      padding: 0;
     line-height: normal;
-    /* 14px */
-    color: var(--color-primary);
+    letter-spacing: 0.02em;
+}
+h5 {
+  font-size: 18px;margin: 0;
+    padding: 0;
+  font-weight: 400;
+  line-height: 160%;letter-spacing: 0.02em;
 }
 /*----------------------------------*/
 p, li{
-  font-family: 'Inter', sans-serif;
-    font-weight: 400;
     font-size: 16px;
     letter-spacing: -0.2px;
     line-height: 150%;
-        margin: 0;
-          padding: 0;
-    /* 16px */
-    color: var(--color-primary);
+    ;
+      margin: 0;
+      padding: 0;
+
 }
 
 .textlink {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 16px;
   letter-spacing: -0.2px;
@@ -71,20 +85,16 @@ p, li{
 }
 /*----------------------------------*/
 .subtext {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 14.4px;
-  line-height: normal;
-  /* 14px */
-  color: var(--color-primary);
+  line-height: 1.4em;;
 }
 
 
 .subtextBoldlink {
-  font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 13px;
-  line-height: normal;
+  line-height: 20px;
   color: var(--color-primary);
     text-decoration: none;
       transition: color 0.2s ease;
@@ -95,11 +105,9 @@ p, li{
 }
 
 .mintext {
-  font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: normal;
-  color: var(--color-primary);
 }
 
 .toc-link {
@@ -112,4 +120,37 @@ p, li{
 
 .toc-link:hover {
   color: rgba(4, 13, 74, 1);
+}
+
+
+.waving-hand {
+animation: wave-animation 2.5s infinite;
+  animation-delay: 12s;
+}
+
+@keyframes wave-animation {
+  0% {
+    transform: rotate(0.0deg)
+  }
+  15% {
+    transform: rotate(14.0deg)
+  }
+  30% {
+    transform: rotate(-8.0deg)
+  }
+  40% {
+    transform: rotate(14.0deg)
+  }
+  50% {
+    transform: rotate(-4.0deg)
+  }
+  60% {
+    transform: rotate(10.0deg)
+  }
+  70% {
+    transform: rotate(0.0deg)
+  }
+  100% {
+    transform: rotate(0.0deg)
+  }
 }

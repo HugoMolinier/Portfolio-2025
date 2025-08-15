@@ -47,7 +47,7 @@ export default function TableOfContents({ links }: { links: SectionLink[] }) {
   return (
     <div
       style={{
-        width: "24%",
+        width: "30%",
         flexShrink: 0,
         display: "flex",
         flexDirection: "column",

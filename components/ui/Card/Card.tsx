@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, ReactNode } from "react";
 import { SizeButton, VariantButton } from "@component/ui/Button/Button.style";
-import CardTag from "@component/ui/CardTag/CardTag";
+import Tag from "@component/ui/Tag/Tag";
 import Button from "@component/ui/Button/Button";
 
 type CardProps = {
@@ -43,10 +43,9 @@ export default function Card({
         position: "relative",
         cursor: variant == "home" ? "pointer" : "none",
         background: background ?? "#fff",
-        height: variant == "home" ? "410px" : "380px",
+        height: variant == "home" ? "416px" : "380px",
         display: "flex",
         gap: "20px",
-        boxShadow: "0 4px 4px rgba(4, 13, 74, 0.25)",
         overflow: "hidden",
       }}
     >
@@ -56,7 +55,7 @@ export default function Card({
           style={{
             flexBasis: "38%",
             display: "flex",
-            padding: "30px 0px 30px 25px",
+            padding: "32px 0px 32px 32px",
             flexDirection: "column",
 
             justifyContent: "space-between",
@@ -73,7 +72,7 @@ export default function Card({
               }}
             >
               {tagList.map((tag, index) => (
-                <CardTag key={index} text={tag} />
+                <Tag key={index} text={tag} variant="project" />
               ))}
             </div>
           )}
@@ -108,18 +107,12 @@ export default function Card({
               </span>
             )}
             {button && (
-              <div
-                style={{
-                  paddingTop: "8px",
-                }}
-              >
-                <Button
-                  size="lg"
-                  text={button?.textButton}
-                  accessibilityLabel="Voir plus d'informations"
-                  onClick={onClick}
-                />
-              </div>
+              <Button
+                size="lg"
+                text={button?.textButton}
+                accessibilityLabel="Voir plus d'informations"
+                onClick={onClick}
+              />
             )}
           </div>
         </div>

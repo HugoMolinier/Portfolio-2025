@@ -7,7 +7,7 @@ export default function footer() {
   return (
     <footer
       style={{
-        maxWidth: "920px",
+        maxWidth: "960px",
         margin: "0 auto",
 
         padding: "40px 0px 60px 0",

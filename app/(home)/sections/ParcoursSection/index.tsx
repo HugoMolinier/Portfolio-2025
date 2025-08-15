@@ -3,7 +3,7 @@ import React from "react";
 
 const parcours = [
   {
-    nom: "Université Le Havre - UFR Informatique",
+    nom: "Université Le Havre - Master Informatique",
     années: "2025 - 2027",
   },
   {
@@ -23,7 +23,7 @@ export default function ParcoursComponent() {
       style={{
         width: "100%",
         scrollMarginTop: "60px",
-        maxWidth: "920px",
+        maxWidth: "960px",
         margin: "0 auto",
         padding: "0 0 60px 0",
         boxSizing: "border-box",
@@ -35,7 +35,7 @@ export default function ParcoursComponent() {
         style={{
           padding: "64px 5px 12px 5px",
           display: "flex",
-          gap: 12,
+          gap: 8,
           alignItems: "flex-end",
         }}
       >

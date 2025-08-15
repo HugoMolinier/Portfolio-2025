@@ -21,7 +21,7 @@ export default function Competence() {
           width: "100%",
           scrollMarginTop: "60px",
           height: "auto",
-          maxWidth: "920px",
+          maxWidth: "960px",
           margin: "0 auto",
           boxSizing: "border-box",
           display: "flex",

@@ -6,7 +6,7 @@ const sizeStyles = {
     padding: "4px 10px",
   },
   lg: {
-    padding: "8px 20px",
+    padding: "8px 24px",
   },
 };
 
@@ -38,11 +38,11 @@ export const getButtonStyle = (
     ...variantStyles(clicked, hovered)[variant],
     borderRadius: "25px",
     cursor: "pointer",
-    gap: "4px",
-    boxShadow: "0 4px 4px rgba(4, 13, 74, 0.25)",
+    gap: "8px",
     transition: "all 0.1s ease",
-    display: "flex",
+    display: "inline-flex",
     justifyContent: "center",
     alignItems: "center",
+    width: "auto",
   };
 };
