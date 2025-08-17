@@ -2,12 +2,13 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+"scripts": {
+  "dev": "next dev --turbopack",
+   "dev-docker": "docker rm -f PortfolioMolinier || true && docker run -d -p 3000:3000 --name PortfolioMolinier my-portfolio && tsc --watch",
+  "build": "next build",
+  "start": "next start ", 
+  "lint": "next lint"
+},
   "dependencies": {
     "next": "15.3.5",
     "react": "^19.0.0",

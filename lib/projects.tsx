@@ -1,6 +1,20 @@
-import EngiePage from "@/projects/DetailProject/EngiePage";
-import pmr from "@/projects/DetailProject/PMR";
-export const projects = {
+import React from "react";
+import EngiePage from "@/(projects)/DetailProject/EngiePage";
+import pmr from "@/(projects)/DetailProject/PMR";
+
+export type ProjectSlug = "engie" | "trajetPMR" | "taxonsLibrary";
+
+interface Project {
+  background: string;
+  tagList: string[];
+  text: { minText: string; title: string; explain: string };
+  image: string;
+  component?: () => any;
+  sections?: { id: string; label: string }[];
+}
+
+
+export const projects: Record<ProjectSlug, Project>  = {
   engie: {
     background: "linear-gradient(67deg, #CDCEED 0%, #E4E692 50%, #B2C073 100%)",
     tagList: ["React Native", "Terraform"],

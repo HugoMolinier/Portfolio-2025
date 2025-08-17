@@ -20,7 +20,7 @@ export default function ProjectsSection() {
             tagList={project.tagList}
             text={project.text}
             button={{ textButton: "Voir en détails" }}
-            onClick={() => router.push(`/projects/${key}`)}
+            onClick={() => router.push(`/${key}`)}
           >
             {project.image && (
               <img

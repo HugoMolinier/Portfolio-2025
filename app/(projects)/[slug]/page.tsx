@@ -2,15 +2,15 @@
 
 import React from "react";
 import { notFound } from "next/navigation";
-import { projects } from "@lib/projects";
+import { projects,ProjectSlug  } from "@lib/projects";
 import Card from "@component/ui/Card/Card";
 import TableOfContents from "./TableOfContents";
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: ProjectSlug }>;
 }
 
 export default function ProjectDetail({ params }: Props) {
-  const [realParams, setRealParams] = React.useState<{ slug: string } | null>(
+  const [realParams, setRealParams] = React.useState<{ slug: ProjectSlug } | null>(
     null
   );
 
