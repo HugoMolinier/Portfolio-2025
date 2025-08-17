@@ -34,6 +34,14 @@ export const projects = {
     },
     image: "/image/image_cfm.png",
     component: pmr,
+    sections: [
+      { id: "introduction", label: "Introduction" },
+      { id: "decouverte", label: "Découverte" },
+      { id: "missions", label: "Missions" },
+      { id: "resultats", label: "Résultats" },
+
+      { id: "apprentissage", label: "Apprentissage" },
+    ],
   },
 
   taxonsLibrary: {
