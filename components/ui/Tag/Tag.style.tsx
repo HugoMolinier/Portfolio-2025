@@ -22,12 +22,12 @@ export function getStyles(variant: VariantTag, icon: boolean) {
   return {
     container: {
       display: "inline-flex",
-      alignItems: "center",
+      alignItems: "center",      paddingLeft: icon ? "48px" : undefined,
       borderRadius: "25px",
       gap: "8px",
       boxShadow: "0 1px 1px rgba(0, 0, 0, 0.25)",
       ...getStylesVariant(variant),
-      paddingLeft: icon ? "48px" : undefined,
+
     },
   };
 }

@@ -13,8 +13,8 @@ export default function Hero() {
 
         backgroundImage: `
           linear-gradient(to top, #FFF, transparent),
-          radial-gradient(rgba(237, 237, 237, 0.30) 2px, transparent 3px),
-          radial-gradient(rgba(237, 237, 237, 0.30) 2px, transparent 3px)
+          radial-gradient(rgba(237, 237, 237, 0.50) 2px, transparent 3px),
+          radial-gradient(rgba(237, 237, 237, 0.50) 2px, transparent 3px)
         `,
         backgroundSize: `
           100% 100%,
@@ -62,13 +62,13 @@ export default function Hero() {
           </div>
           <div
             style={{
-              padding: "0px 12px",
+
               width: "61%",
             }}
           >
             <h5>
               Je suis MOLINIER Hugo, passionné par le développement ainsi que
-              par les IOT. <br />
+              par l'IOT. <br />
               Voici mon porfolio avec mes projets et stages effectués
             </h5>
           </div>

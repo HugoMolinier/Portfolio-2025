@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+
 
 const sectionStyle = { paddingTop: 80 };
 const imageStyle = { borderRadius: 8, height: "auto", width: "25%" };
 const imgContainerStyle = { display: "flex", padding: "8px 5%", gap: "10%" };
 
-const EngiePage = () => (
+const EngiePage = () => {
+
+const myRef = useRef<HTMLDivElement | null>(null);
+
+
+useEffect(() => {
+  if (vidRef.current) {
+    vidRef.current.play().catch(err => console.log(err));
+  }
+}, []);
+
+return (
   <main>
     <section id="introduction">
       <p>
@@ -237,8 +249,52 @@ const EngiePage = () => (
         .apk j'ai utilisé EAS (Expo Application Services) pour compiler et
         générer l’APK de manière fiable.
       </p>
+      <video
+  src="//image/pmr/publicitéCFM.jpg"
+  ref={ vidRef }
+  muted
+  autoPlay
+  loop 
+/>
     </section>
+    <section id="introduction">
+      <header style={{ marginBottom: 20, marginTop: 40 }}>
+        <h2>Apprentissage</h2>
+      </header>
+      <p>
+        Au-delà des aspects techniques (React Native, Expo, EAS pour la
+        génération d’APK, Docker pour la conteneurisation et le déploiement), ce
+        projet m’a surtout permis de mieux comprendre la distinction entre la
+        MOA (Maîtrise d’Ouvrage) et la MOE (Maîtrise d’Œuvre), ainsi que la
+        manière dont elles interagissent dans la gestion de projet. Nous avons
+        également appris à préparer et réaliser une présentation type salon, en
+        valorisant le projet comme un produit destiné à être exposé et présenté
+        à des acteurs extérieurs.
+      </p>
+    </section>
+    <header style={{ marginBottom: 8, marginTop: 40 }}>
+      <h3>En Conclusion</h3>
+    </header>
+    <p>
+      Ce projet de trajet multimodal pour personnes à mobilité réduite m’a
+      permis d’acquérir une expérience complète sur l’ensemble du cycle de vie
+      d’un projet informatique, de la conception au déploiement, en passant par
+      la maintenance. J’ai consolidé mes compétences techniques, notamment sur
+      Node.js, MongoDB, SQL, React Native, Expo, Docker et Kafka, tout en
+      développant une compréhension approfondie des architectures backend et des
+      flux de données complexes.
+    </p>
+    <br />
+    <p>
+      Au-delà de la technique, ce projet a renforcé mes compétences en gestion
+      de projet agile, en communication inter-équipes et en organisation, en
+      alternant les rôles de MOA et MOE. Le travail sur des bases existantes, la
+      génération d’APK et la présentation aux utilisateurs finaux m’ont permis
+      de gagner en adaptabilité, rigueur et autonomie.
+    </p>
   </main>
-);
+)
+
+};
 
 export default EngiePage;
