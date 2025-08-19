@@ -17,6 +17,9 @@ h6 {
   color: var(--color-secondary);
   font-family: 'Inter', sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body::-webkit-scrollbar {
   display: none;
   color: var(--color-secondary)

@@ -17,7 +17,6 @@ export default function Box({ text, icon, iconPosition = "left" }: BoxProps) {
   const renderIcon = () => {
     if (!icon) return null;
 
-    // Si c'est un chemin (commence par "/", "./", "http", etc.)
     const isImagePath =
       typeof icon === "string" &&
       (icon.startsWith("/") ||

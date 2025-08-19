@@ -18,6 +18,7 @@ type CardProps = {
     size?: SizeButton;
   };
   children?: ReactNode;
+  leftImage?: string;
   background?: string;
   onClick?: () => void;
 };
@@ -41,7 +42,7 @@ export default function Card({
       style={{
         borderRadius: "8px",
         position: "relative",
-        cursor: variant == "home" ? "pointer" : "none",
+        cursor: variant == "home" ? "pointer" : "default",
         background: background ?? "#fff",
         height: variant == "home" ? "416px" : "380px",
         display: "flex",
@@ -117,13 +118,32 @@ export default function Card({
           </div>
         </div>
       )}
+      {variant === "full" && (
+        <div
+          style={{
+            flexBasis: "50%",
+            display: "flex",
+            padding: "32px 0px 0px 0px",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            zIndex: 1,
+          }}
+        >
+          <img
+            src={"/image/engie/LEFT_pres.png"}
+            alt=""
+            style={{ width: "100%" }}
+          />
+        </div>
+      )}
+
       {/* Colonne de droite - contenu libre */}
       <div
         style={{
           flex: 1,
           display: "flex",
           flexDirection: "column",
-          padding: "30px 0 0 0", // <-- ici au lieu de 40px, mettre 30px
+          padding: "30px 0 0 0",
           justifyContent: "flex-start",
           position: "relative",
         }}

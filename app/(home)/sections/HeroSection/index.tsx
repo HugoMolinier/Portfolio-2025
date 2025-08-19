@@ -2,6 +2,7 @@
 import React from "react";
 import Button from "@component/ui/Button/Button";
 import Tag from "@component/ui/Tag/Tag";
+import Icon from "@component/ui/Icon/Icon";
 
 export default function Hero() {
   return (
@@ -35,7 +36,7 @@ export default function Hero() {
           margin: "0 auto",
           boxSizing: "border-box",
           position: "relative",
-          padding: "100px 72px 80px 8px",
+          padding: "100px 72px 0px 8px",
         }}
       >
         <img
@@ -62,7 +63,6 @@ export default function Hero() {
           </div>
           <div
             style={{
-
               width: "61%",
             }}
           >
@@ -72,6 +72,17 @@ export default function Hero() {
               Voici mon porfolio avec mes projets et stages effectués
             </h5>
           </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            paddingTop: "48px",
+          }}
+        >
+          <a href="#projets" style={{ cursor: "pointer" }}>
+            <Icon name="arrow" color="rgba(3,15,75,0.2)" size={28} />
+          </a>
         </div>
       </div>
     </section>

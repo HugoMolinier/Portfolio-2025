@@ -135,6 +135,26 @@ export const icons: Record<
       </g>
     </svg>
   ),
+  arrow: ({ size = 20, color = "#000", className }) => (
+    <svg
+      viewBox="0 0 32 32"
+      xmlSpace="preserve"
+      role="img"
+      width={size}
+      height={size}
+    >
+      <g clipRule="evenodd" fill="#121313" fillRule="evenodd">
+        <path
+          d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm0 30.031C8.28 30.031 2 23.72 2 16 2 8.28 8.28 2 16 2s14 6.28 14 14-6.28 14.031-14 14.031z"
+          fill={color}
+        />
+        <path
+          d="M23.374 13.08a1.007 1.007 0 00-.419-.075H9.013c-.887-.024-1.38 1.07-.742 1.702l6.999 6.899a1.034 1.034 0 001.429 0l6.991-6.892a.995.995 0 00-.316-1.634c-.134-.055.366.148 0 0-.134-.055.366.148 0 0-.134-.055.366.148 0 0zm-7.39 6.408l-4.559-4.494h9.118l-4.559 4.494z"
+          fill={color}
+        />
+      </g>
+    </svg>
+  ),
 };
 
 export type IconName = keyof typeof icons;

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { notFound } from "next/navigation";
-import { projects,ProjectSlug  } from "@lib/projects";
+import { projects, ProjectSlug } from "@lib/projects";
 import Card from "@component/ui/Card/Card";
 import TableOfContents from "./TableOfContents";
 interface Props {
@@ -10,9 +10,9 @@ interface Props {
 }
 
 export default function ProjectDetail({ params }: Props) {
-  const [realParams, setRealParams] = React.useState<{ slug: ProjectSlug } | null>(
-    null
-  );
+  const [realParams, setRealParams] = React.useState<{
+    slug: ProjectSlug;
+  } | null>(null);
 
   React.useEffect(() => {
     params.then(setRealParams);
@@ -51,7 +51,11 @@ export default function ProjectDetail({ params }: Props) {
           padding: "80px 0 52px",
         }}
       >
-        <Card background={project.background} variant="full">
+        <Card
+          background={project.background}
+          variant="full"
+          leftImage={project.leftimage}
+        >
           {project.image && (
             <img
               src={project.image}

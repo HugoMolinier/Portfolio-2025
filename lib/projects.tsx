@@ -9,12 +9,12 @@ interface Project {
   tagList: string[];
   text: { minText: string; title: string; explain: string };
   image: string;
+  leftimage: string;
   component?: () => any;
   sections?: { id: string; label: string }[];
 }
 
-
-export const projects: Record<ProjectSlug, Project>  = {
+export const projects: Record<ProjectSlug, Project> = {
   engie: {
     background: "linear-gradient(67deg, #CDCEED 0%, #E4E692 50%, #B2C073 100%)",
     tagList: ["React Native", "Terraform"],
@@ -25,6 +25,7 @@ export const projects: Record<ProjectSlug, Project>  = {
         "Front développeur : améliorer le design global de l’application mobile en React Native. Implémentation du dark mode et de composants.",
     },
     image: "/image/engie mock.png",
+    leftimage: "/image/engie/LEFT_pres.png",
     component: EngiePage,
 
     sections: [
@@ -47,6 +48,7 @@ export const projects: Record<ProjectSlug, Project>  = {
         "Applications pour PMR et agents pour scanner et suivre un trajet multimodal. Développement, hébergement et build de l'application.",
     },
     image: "/image/image_cfm.png",
+    leftimage: "/image/engie/LEFT_pres.png",
     component: pmr,
     sections: [
       { id: "introduction", label: "Introduction" },
@@ -68,5 +70,7 @@ export const projects: Record<ProjectSlug, Project>  = {
         "Application web pour créer et gérer ta bibliothèque personnelle de taxons, et explorer celles des autres utilisateurs.",
     },
     image: "/image/taxon.png",
+    leftimage: "/image/engie/LEFT_pres.png",
+    component: pmr,
   },
 };

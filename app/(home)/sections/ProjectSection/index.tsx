@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import CardView from "./components/CardView";
+import Icon from "@component/ui/Icon/Icon";
 
 export default function Project() {
   return (
@@ -8,7 +9,7 @@ export default function Project() {
       id="projets"
       style={{
         width: "100%",
-        scrollMarginTop: "60px",
+        scrollMarginTop: "28px",
         maxWidth: "960px",
         margin: "0 auto",
         boxSizing: "border-box",
@@ -35,7 +36,6 @@ export default function Project() {
         </span>
         <h3 style={{ margin: 0, lineHeight: 1 }}>Projets / Stage</h3>
       </div>
-
       <CardView />
     </section>
   );

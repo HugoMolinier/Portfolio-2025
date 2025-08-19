@@ -36,6 +36,14 @@ export const categories = [
       },
     ],
   },
+  {
+    label: "Systèmes",
+    skills: [
+      { name: "Debian", iconsrc: "/image/icons/logiciel/debian.svg" },
+      { name: "Ubuntu", iconsrc: "/image/icons/logiciel/ubuntu.svg" },
+      { name: "Alpine Linux", iconsrc: "/image/icons/logiciel/alpine.svg" },
+    ],
+  },
 ];
 
 export default function CompetencesContentHardware() {
