@@ -16,7 +16,6 @@ export default function TableOfContents({ links }: { links: SectionLink[] }) {
 
     observerRef.current = new IntersectionObserver(
       (entries) => {
-        // On cherche l'élément visible le plus haut dans le viewport
         const visibleSections = entries
           .filter((entry) => entry.isIntersecting)
           .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
@@ -30,7 +29,7 @@ export default function TableOfContents({ links }: { links: SectionLink[] }) {
       },
       {
         root: null,
-        rootMargin: "-30% 0px -70% 0px", // ignore la partie basse de l'écran
+        rootMargin: "-30% 0px -70% 0px",
         threshold: 0,
       }
     );
@@ -53,7 +52,7 @@ export default function TableOfContents({ links }: { links: SectionLink[] }) {
         boxSizing: "border-box",
         gap: 16,
         position: "sticky",
-        top: 100, // hauteur navbar
+        top: 100,
         alignSelf: "flex-start",
       }}
     >

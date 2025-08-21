@@ -1,9 +1,8 @@
 "use client";
 import React from "react";
 import Tag from "@component/ui/Tag/Tag";
-import Icon from "@component/ui/Icon/Icon";
 import { motion } from "framer-motion";
-import "./Hero.css"; // Import du fichier CSS
+import "./Hero.css";
 import HeroArrow from "./components/heroArrow";
 
 export default function Hero() {

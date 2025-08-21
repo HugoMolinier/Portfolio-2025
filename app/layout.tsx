@@ -4,8 +4,11 @@ import NavBar from "@component/layout/NavBar";
 import Footer from "@component/layout/Footer";
 
 export const metadata = {
-  title: "Mon Portfolio",
-  description: "Portfolio Next.js avec layout et page home",
+  title: "Molinier Hugo",
+  description: "Portfolio de Molinier Hugo",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

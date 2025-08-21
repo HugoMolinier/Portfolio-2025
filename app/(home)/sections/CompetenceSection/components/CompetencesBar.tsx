@@ -1,4 +1,3 @@
-// CompetenceBar.tsx
 "use client";
 import React from "react";
 import Icon from "@component/ui/Icon/Icon";

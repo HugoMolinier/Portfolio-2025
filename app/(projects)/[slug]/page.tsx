@@ -24,7 +24,7 @@ export default function ProjectDetail({ params }: Props) {
 
   useEffect(() => {
     const handleResize = () => setIsWide(window.innerWidth > 720);
-    handleResize(); // initial check
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

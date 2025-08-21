@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from "react";
+import React, { useState } from "react";
 
 import { SizeButton, VariantButton } from "@component/ui/Button/Button.style";
 
@@ -26,13 +26,9 @@ type CardProps = {
 
     size?: SizeButton;
   };
-
-  children?: string; // Type changed to string to represent the image source
-
+  children?: string;
   leftImage?: string;
-
   background?: string;
-
   onClick?: () => void;
 };
 
@@ -87,7 +83,7 @@ export default function Card({
       {variant === "home" && (
         <div
           style={{
-            flex: "1 1 32%", // La base de la colonne de gauche est maintenant de 32%
+            flex: "1 1 32%",
 
             minWidth: "300px",
 

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, ReactNode } from "react";
+import React, { useState } from "react";
 import {
   SizeButton,
   VariantButton,
@@ -45,11 +45,11 @@ export default function Button({
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => {
           setHovered(false);
-          setClicked(false); // reset clicked quand souris sort
+          setClicked(false);
         }}
-        onMouseDown={() => setClicked(true)} // click appuyé
-        onMouseUp={() => setClicked(false)} // click relâché
-        onBlur={() => setClicked(false)} // si focus perdu (ex : tab)
+        onMouseDown={() => setClicked(true)}
+        onMouseUp={() => setClicked(false)}
+        onBlur={() => setClicked(false)}
       >
         {icon && iconPosition === "left" && (
           <Icon name={icon} color={buttonStyle.color} size={14} />

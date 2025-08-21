@@ -7,7 +7,7 @@ import { IconName } from "@component/ui/Icon/icons";
 
 type BoxProps = {
   text: string;
-  icon?: IconName | string; // peut être un nom connu OU un chemin
+  icon?: IconName | string;
   iconPosition?: "left" | "right";
 };
 
