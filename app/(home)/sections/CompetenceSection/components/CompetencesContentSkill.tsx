@@ -47,11 +47,9 @@ export default function CompetencesContentSkill() {
         display: "flex",
         flexDirection: "column",
         gap: 32,
-        borderBottom: "1px solid #F5F5F5",
-        boxShadow: "0px 4px 6px -6px rgba(4, 13, 74, 0.25)",
       }}
     >
-      {categories.map((category, index) => (
+      {categories.map((category) => (
         <div
           key={category.label}
           style={{

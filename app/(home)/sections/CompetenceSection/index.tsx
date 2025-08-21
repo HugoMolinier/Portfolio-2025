@@ -10,20 +10,14 @@ export default function Competence() {
   return (
     <div
       style={{
-        width: "100%",
-        height: "auto",
-        backgroundColor: "#F5F5F5",
+        backgroundColor: "rgba(4, 13, 74, 0.05)",
       }}
     >
       <section
         id="competences"
+        className="section"
         style={{
-          width: "100%",
           scrollMarginTop: "60px",
-          height: "auto",
-          maxWidth: "960px",
-          margin: "0 auto",
-          boxSizing: "border-box",
           display: "flex",
           flexDirection: "column",
           gap: "12px",
@@ -32,7 +26,7 @@ export default function Competence() {
       >
         <div
           style={{
-            padding: "16px 5px 8px 5px",
+            padding: "16px 5px 24px 5px",
             display: "flex",
             gap: 12,
             alignItems: "flex-end",

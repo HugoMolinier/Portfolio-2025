@@ -7,12 +7,10 @@ export default function Project() {
   return (
     <section
       id="projets"
+      className="section"
       style={{
-        width: "100%",
         scrollMarginTop: "28px",
-        maxWidth: "960px",
-        margin: "0 auto",
-        boxSizing: "border-box",
+
         display: "flex",
         flexDirection: "column",
       }}

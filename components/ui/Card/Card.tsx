@@ -1,35 +1,56 @@
-"use client";
 import React, { useState, ReactNode } from "react";
+
 import { SizeButton, VariantButton } from "@component/ui/Button/Button.style";
+
 import Tag from "@component/ui/Tag/Tag";
+
 import Button from "@component/ui/Button/Button";
 
 type CardProps = {
   tagList?: string[];
+
   text?: {
     minText?: string;
+
     title?: string;
+
     explain?: string;
   };
+
   variant?: "home" | "full";
+
   button?: {
     textButton: string;
+
     variant?: VariantButton;
+
     size?: SizeButton;
   };
-  children?: ReactNode;
+
+  children?: string; // Type changed to string to represent the image source
+
   leftImage?: string;
+
   background?: string;
+
   onClick?: () => void;
 };
 
 export default function Card({
   tagList,
+
   text,
+
   variant = "home",
+
   button,
+
   children,
+
+  leftImage,
+
   background,
+
   onClick,
 }: CardProps) {
   const [hovered, setHovered] = useState(false);
@@ -41,12 +62,24 @@ export default function Card({
       onClick={onClick}
       style={{
         borderRadius: "8px",
+
         position: "relative",
-        cursor: variant == "home" ? "pointer" : "default",
+
+        cursor: variant === "home" ? "pointer" : "default",
+
         background: background ?? "#fff",
-        height: variant == "home" ? "416px" : "380px",
+
+        maxHeight: variant === "home" ? "424px" : "380px",
+
+        height: "auto",
+
         display: "flex",
-        gap: "20px",
+        paddingTop: "32px",
+
+        gap: "0px",
+
+        flexWrap: "wrap",
+
         overflow: "hidden",
       }}
     >
@@ -54,21 +87,32 @@ export default function Card({
       {variant === "home" && (
         <div
           style={{
-            flexBasis: "38%",
+            flex: "1 1 32%", // La base de la colonne de gauche est maintenant de 32%
+
+            minWidth: "300px",
+
+            height: "auto",
+
             display: "flex",
-            padding: "32px 0px 32px 32px",
+
+            padding: "0 32px 32px 32px",
+
+            gap: "16px",
+
             flexDirection: "column",
 
             justifyContent: "space-between",
-            zIndex: 1,
           }}
         >
           {tagList && (
             <div
               style={{
                 display: "flex",
+
                 justifyContent: "flex-start",
+
                 gap: "8px",
+
                 flexWrap: "wrap",
               }}
             >
@@ -77,12 +121,14 @@ export default function Card({
               ))}
             </div>
           )}
+
           <div
             style={{
               display: "flex",
+
               flexDirection: "column",
+
               gap: 8,
-              margin: 0,
             }}
           >
             {text?.minText && (
@@ -90,6 +136,7 @@ export default function Card({
                 className="subtext"
                 style={{
                   color: "rgba(4, 13, 74, 0.5)",
+
                   lineHeight: "normal",
                 }}
               >
@@ -97,16 +144,8 @@ export default function Card({
               </span>
             )}
             {text?.title && <h2>{text.title}</h2>}
-            {text?.explain && (
-              <span className="subtext">
-                {text.explain.split("\n").map((line, i) => (
-                  <React.Fragment key={i}>
-                    {line}
-                    <br />
-                  </React.Fragment>
-                ))}
-              </span>
-            )}
+            {text?.explain && <span className="subtext">{text?.explain}</span>}
+
             {button && (
               <Button
                 size="lg"
@@ -118,49 +157,52 @@ export default function Card({
           </div>
         </div>
       )}
+
       {variant === "full" && (
         <div
           style={{
-            flexBasis: "50%",
-            display: "flex",
-            padding: "32px 0px 0px 0px",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            zIndex: 1,
+            flex: "1 1 50%",
           }}
         >
-          <img
-            src={"/image/engie/LEFT_pres.png"}
-            alt=""
-            style={{ width: "100%" }}
-          />
+          <img src={leftImage} alt="" style={{ width: "100%" }} />
         </div>
       )}
-
-      {/* Colonne de droite - contenu libre */}
+      {/* Colonne de droite - l'image */}
       <div
         style={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-          padding: "30px 0 0 0",
-          justifyContent: "flex-start",
+          flex: "1 1 50%",
+
           position: "relative",
+
+          display: "flex",
+
+          justifyContent: "flex-end",
+
+          marginTop: "auto",
         }}
       >
-        <div
+        <img
+          src={children}
+          alt=""
           style={{
-            position: "absolute",
-            bottom: -15,
-            right: -15,
+            maxWidth: "98%",
+
+            maxHeight: "90%",
+
+            height: "auto",
+
+            width: "auto",
+
+            objectFit: "contain",
+
             transition: "transform 0.3s ease",
+
             transformOrigin: "bottom right",
+
             transform:
-              hovered && variant == "home" ? "scale(1.04)" : "scale(1)",
+              hovered && variant === "home" ? "scale(1.03)" : "scale(1)",
           }}
-        >
-          {children}
-        </div>
+        />
       </div>
     </div>
   );

@@ -1,10 +1,8 @@
 import React, { useRef, useEffect } from "react";
 
-const sectionStyle = { paddingTop: 80 };
-const imageStyle = { borderRadius: 8, height: "auto", width: "25%" };
-const imgContainerStyle = { display: "flex", padding: "8px 5%", gap: "10%" };
+const sectionStyle = { paddingTop: 52 };
 
-const EngiePage = () => {
+const MultiModal_Travel = () => {
   const vidRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -47,7 +45,9 @@ const EngiePage = () => {
           charge du développement, et de MOA (Maîtrise d’Ouvrage), responsable
           de la validation des livrables. L’évaluation portait sur notre
           capacité à gérer simultanément ces deux fonctions, ce qui nous a
-          permis de maîtriser l’ensemble du cycle de vie du projet.
+          permis de maîtriser l’ensemble du cycle de vie du projet.Mon rôle
+          était de gérer le backend, en collaboration avec un autre membre de
+          l’équipe dédié à la partie DevOps.
         </p>
       </section>
       <section id="decouverte" style={sectionStyle}>
@@ -102,6 +102,12 @@ const EngiePage = () => {
             couvert la planification, la réalisation technique et la validation,
             tout en garantissant performance et fiabilité.
           </p>
+          <img
+            src="/image/MultiModal_Travel/Affiche_archi.jpg"
+            width="100%"
+            style={{ borderRadius: 8 }}
+            alt="image de l'affiche d'architecture du BackEnd"
+          />
           <header style={{ marginBottom: 20, marginTop: 20 }}>
             <h3>Réflexion et Création de l'ensemble de la base de données</h3>
           </header>
@@ -135,10 +141,10 @@ const EngiePage = () => {
           </p>
 
           <img
-            src="/image/pmr/Affiche_archi.jpg"
+            src="/image/MultiModal_Travel/trajet_comp.png"
             width="100%"
             style={{ borderRadius: 8 }}
-            alt="Aperçu du projet ENGIE"
+            alt="Image de comment est composé un trajet"
           />
         </article>
         <article>
@@ -208,10 +214,10 @@ const EngiePage = () => {
           façon de structurer et déployer un projet.
         </p>
         <img
-          src="/image/pmr/Affiche_pipeline.jpg"
+          src="/image/MultiModal_Travel/Affiche_pipeline.jpg"
           width="100%"
           style={{ borderRadius: 8, margin: 8 }}
-          alt="Aperçu du projet ENGIE"
+          alt="Image de la pipeline de déploiement"
         />
         <br />
 
@@ -241,10 +247,10 @@ const EngiePage = () => {
           flux) ont également été exposées.
         </p>
         <img
-          src="/image/pmr/presentation.jpg"
+          src="/image/MultiModal_Travel/presentation.jpg"
           width="100%"
           style={{ borderRadius: 8, margin: 8 }}
-          alt="Aperçu du projet ENGIE"
+          alt="Image de la journée porte ouverte"
         />
         <p>
           Cette présentation a permis de faire découvrir le fonctionnement de la
@@ -252,13 +258,27 @@ const EngiePage = () => {
           améliorer l’expérience utilisateur.
         </p>
         <video
-          src="/image/pmr/publicitéCFM.mov"
+          src="/image/MultiModal_Travel/publicitéCFM.mov"
           ref={vidRef}
           muted
           autoPlay
           loop
           style={{ width: "100%", height: "auto", borderRadius: 8 }}
         />
+      </section>
+      <section id="améliorations" style={sectionStyle}>
+        <header style={{ marginBottom: 20 }}>
+          <h2>Améliorations possibles</h2>
+        </header>
+        <p>
+          Même si le projet est abouti et fonctionnel, certaines pistes
+          permettraient de le rapprocher d’un usage réel. L’intégration de
+          véritables API de transport (SNCF, RATP, Air France, FlixBus, Uber,
+          etc.) remplacerait les bases simulées et renforcerait la fiabilité du
+          système. Cela permettrait d’offrir une expérience plus réaliste, avec
+          des données en temps réel, tout en améliorant la précision des trajets
+          proposés et le suivi des réservations.
+        </p>
       </section>
       <section id="apprentissage" style={sectionStyle}>
         <header style={{ marginBottom: 20 }}>
@@ -296,8 +316,62 @@ const EngiePage = () => {
           autonomie.
         </p>
       </section>
+
+      <section id="lien" style={sectionStyle}>
+        <header style={{ marginBottom: 20 }}>
+          <h2>Lien</h2>
+        </header>
+        <div
+          style={{
+            gap: "24px",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <a
+            href="https://github.com/HugoMolinier/UPEC-SAE5.01_Api_Flexitrip"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+              textDecoration: "none",
+            }}
+          >
+            <img
+              src="/image/icons/other/github.svg"
+              alt="GitHub"
+              style={{ width: 30, height: 30 }}
+            />
+            <span className="subtextBoldlink" style={{ fontSize: "14px" }}>
+              Projet Semestre 5 : API Flexitrip
+            </span>
+          </a>
+          <a
+            href="https://github.com/SAEIUT/Haidi-server"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "16px",
+              textDecoration: "none",
+            }}
+          >
+            <img
+              src="/image/icons/other/github.svg"
+              alt="GitHub"
+              style={{ width: 30, height: 30 }}
+            />
+            <span className="subtextBoldlink" style={{ fontSize: "14px" }}>
+              Projet Semestre 6 : API CFM
+            </span>
+          </a>
+        </div>
+      </section>
     </main>
   );
 };
 
-export default EngiePage;
+export default MultiModal_Travel;

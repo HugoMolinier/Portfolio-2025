@@ -21,19 +21,8 @@ export default function ProjectsSection() {
             text={project.text}
             button={{ textButton: "Voir en détails" }}
             onClick={() => router.push(`/${key}`)}
-          >
-            {project.image && (
-              <img
-                src={project.image}
-                alt="Projet illustration"
-                style={{
-                  width: "100%",
-                  borderRadius: 8,
-                  objectFit: "cover",
-                }}
-              />
-            )}
-          </Card>
+            children={project.image}
+          />
         </div>
       ))}
     </div>

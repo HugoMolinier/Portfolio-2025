@@ -5,15 +5,15 @@ function getStylesVariant(variant: VariantTag) {
     case "project":
       return {
         backgroundColor: "rgba(3,15,75,0.05)",
-        fontSize: "12px",
-        padding: "6px 12px",
+        fontSize: "clamp(10px, 2vw, 12px)",
+        padding: "clamp(4px, 1vw, 6px) clamp(8px, 2vw, 12px)",
       };
     case "discorvery":
     default:
       return {
         backgroundColor: "rgba(3,15,75,0.05)",
-        fontSize: "16px",
-        padding: "8px 16px",
+        fontSize: "clamp(14px, 2.5vw, 16px)",
+        padding: "clamp(6px, 1.5vw, 8px) clamp(12px, 3vw, 16px)",
       };
   }
 }

@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
 :root {
-  --color-primary: #040D4A;
-  --color-secondary:#161E47;
+  --color-primary: #040d4a;
+  --color-secondary: #161e47;
+
+  --maxwidth-sectionMain: 960px;
+  --width-sectionMain: 90%;
+  --maxwidth-sectionProject: 85%;
 }
+
 body,
 p,
 li,
@@ -15,61 +21,66 @@ h4,
 h5,
 h6 {
   color: var(--color-secondary);
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body::-webkit-scrollbar {
-  display: none;
-  color: var(--color-secondary)
-  /* Chrome, Safari */
+  color: var(--color-secondary);
 }
+
 * {
   box-sizing: border-box;
 }
+
+/*----------------------------------*/
+/* GRANDS ÉCRANS > 960px */
 h1 {
   font-weight: 400;
   font-size: 70px;
-
   letter-spacing: -2.8px;
-line-height: 120%;  
+  line-height: 120%;
   margin: 0;
-    padding: 0;
+  padding: 0;
 }
 
 h2 {
   font-weight: 500;
-  line-height: 100%;
-letter-spacing: 0.02em;
-  margin: 0;
-    padding: 0;
   font-size: 26px;
-  /* 28px */
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
-    font-weight: 500;
-    font-size: 18px;margin: 0;
-      padding: 0;
-    line-height: normal;
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: normal;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
 }
-h5 {
-  font-size: 18px;margin: 0;
-    padding: 0;
-  font-weight: 400;
-  line-height: 160%;letter-spacing: 0.02em;
-}
-/*----------------------------------*/
-p, li{
-    font-size: 16px;
-    letter-spacing: -0.2px;
-    line-height: 150%;
-    ;
-      margin: 0;
-      padding: 0;
 
+h5 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding: 0;
+}
+
+p,
+li {
+  font-size: 16px;
+  letter-spacing: -0.2px;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
 }
 
 .textlink {
@@ -81,27 +92,26 @@ p, li{
   transition: color 0.2s ease;
 }
 
-/* Hover uniquement si c'est un lien */
 .textlink:hover {
   color: #51600b;
   text-decoration: underline;
 }
-/*----------------------------------*/
+
 .subtext {
   font-weight: 400;
   font-size: 14.4px;
-  line-height: 1.4em;;
+  line-height: 1.4em;
 }
-
 
 .subtextBoldlink {
   font-weight: 500;
-  font-size: 13px;
+  font-size: 13.4px;
   line-height: 20px;
   color: var(--color-primary);
-    text-decoration: none;
-      transition: color 0.2s ease;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
+
 .subtextBoldlink:hover {
   color: #51600b;
   text-decoration: underline;
@@ -115,7 +125,6 @@ p, li{
 
 .toc-link {
   display: block;
-
   font-size: 13px;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -125,35 +134,89 @@ p, li{
   color: rgba(4, 13, 74, 1);
 }
 
-
 .waving-hand {
-animation: wave-animation 2.5s infinite;
+  animation: wave-animation 2.5s infinite;
   animation-delay: 12s;
 }
 
 @keyframes wave-animation {
   0% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
   15% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
   30% {
-    transform: rotate(-8.0deg)
+    transform: rotate(-8deg);
   }
   40% {
-    transform: rotate(14.0deg)
+    transform: rotate(14deg);
   }
   50% {
-    transform: rotate(-4.0deg)
+    transform: rotate(-4deg);
   }
   60% {
-    transform: rotate(10.0deg)
+    transform: rotate(10deg);
   }
   70% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(0.0deg)
+    transform: rotate(0deg);
+  }
+}
+
+.responsive-image {
+  width: 278px;
+  height: 278px;
+  float: right;
+  margin-left: 20px;
+  border-radius: 8px;
+}
+.section {
+  width: var(--width-sectionMain);
+  height: auto;
+  max-width: var(--maxwidth-sectionMain);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*----------------------------------*/
+/* ÉCRANS ≤ 960px */
+@media (max-width: 960px) {
+  h1 {
+    font-size: clamp(48px, 5vw, 70px);
+  }
+  h2 {
+    font-size: clamp(18px, 3vw, 26px);
+  }
+  h3 {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+  h5 {
+    font-size: clamp(12px, 2vw, 18px);
+  }
+  p,
+  li,
+  .textlink {
+    font-size: clamp(12px, 2.5vw, 16px);
+  }
+
+  .subtext {
+    font-size: clamp(10px, 2.5vw, 14.4px);
+  }
+
+  /* IMAGE RÉACTIVE */
+  .responsive-image {
+    width: clamp(150px, 25vw, 278px);
+    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 38px;
+  }
+  .responsive-image {
+    width: 25%;
   }
 }

@@ -20,22 +20,20 @@ export default function ParcoursComponent() {
   return (
     <section
       id="parcours"
+      className="section"
       style={{
-        width: "100%",
         scrollMarginTop: "60px",
-        maxWidth: "960px",
-        margin: "0 auto",
+
         padding: "0 0 60px 0",
-        boxSizing: "border-box",
         display: "flex",
         flexDirection: "column",
       }}
     >
       <div
         style={{
-          padding: "64px 5px 12px 5px",
+          padding: "64px 5px 24px 5px",
           display: "flex",
-          gap: 8,
+          gap: 12,
           alignItems: "flex-end",
         }}
       >

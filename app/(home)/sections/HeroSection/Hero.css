@@ -1,0 +1,52 @@
+.hero-section {
+  background-image: linear-gradient(to top, #fff, transparent),
+    radial-gradient(rgba(237, 237, 237, 0.5) 2px, transparent 3px),
+    radial-gradient(rgba(237, 237, 237, 0.5) 2px, transparent 3px);
+  background-size: 100% 100%, 2rem 2rem, 2rem 2rem;
+  background-position: 0 0, 0 0, 1rem 1rem;
+  background-repeat: no-repeat, repeat, repeat;
+}
+
+.hero-container {
+  position: relative;
+  padding: 100px 72px 0px 8px;
+}
+
+.hero-content {
+  padding-top: 32px;
+}
+
+.hero-title {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.hero-subtitle {
+  max-width: 610px;
+}
+
+.hero-arrow {
+  display: flex;
+  justify-content: center;
+  padding-top: 48px;
+}
+.icon {
+  width: 34px;
+}
+
+@media (max-width: 920px) {
+  .hero-container {
+    padding-right: 16px;
+  }
+  .hero-title {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .icon {
+    width: 24px;
+  }
+  .hero-subtitle {
+    max-width: 400px;
+  }
+}

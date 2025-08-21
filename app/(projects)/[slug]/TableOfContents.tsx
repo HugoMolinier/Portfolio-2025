@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 interface SectionLink {
   id: string;
@@ -9,40 +9,39 @@ interface SectionLink {
 
 export default function TableOfContents({ links }: { links: SectionLink[] }) {
   const [activeId, setActiveId] = useState<string | null>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
   useEffect(() => {
-    const observer = new IntersectionObserver(
+    if (!links.length) return;
+
+    observerRef.current = new IntersectionObserver(
       (entries) => {
-        let minOffset = Number.POSITIVE_INFINITY;
-        let currentId: string | null = null;
+        // On cherche l'élément visible le plus haut dans le viewport
+        const visibleSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
 
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const offset = Math.abs(entry.boundingClientRect.top);
-            if (offset < minOffset) {
-              minOffset = offset;
-              currentId = entry.target.id;
-            }
+        if (visibleSections.length > 0) {
+          const topSection = visibleSections[0].target.id;
+          if (topSection !== activeId) {
+            setActiveId(topSection);
           }
-        });
-
-        if (currentId) {
-          setActiveId(currentId);
         }
       },
       {
         root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
+        rootMargin: "-30% 0px -70% 0px", // ignore la partie basse de l'écran
+        threshold: 0,
       }
     );
 
     links.forEach((link) => {
       const el = document.getElementById(link.id);
-      if (el) observer.observe(el);
+      if (el) observerRef.current?.observe(el);
     });
 
-    return () => observer.disconnect();
-  }, [links]);
+    return () => observerRef.current?.disconnect();
+  }, [links, activeId]);
 
   return (
     <div

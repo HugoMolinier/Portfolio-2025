@@ -23,10 +23,9 @@ export default function NavBar({ isFixed = true }: NavBarProps) {
       <nav
         style={{
           maxWidth: "960px",
+          width: "90%",
           margin: "0 auto",
-
-          padding: "12px 0px",
-
+          padding: "12px 0",
           gap: "auto",
           display: "flex",
           justifyContent: "space-between",
@@ -51,7 +50,7 @@ export default function NavBar({ isFixed = true }: NavBarProps) {
           </a>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: "32px" }}>
-          <a href="//" className="subtextBoldlink">
+          <a href="/about" className="subtextBoldlink">
             A Propos
           </a>
           <Button

@@ -54,10 +54,7 @@ export default function Button({
         {icon && iconPosition === "left" && (
           <Icon name={icon} color={buttonStyle.color} size={14} />
         )}
-        <span
-          className={size === "md" ? "subText" : "subText"}
-          style={{ color: buttonStyle.color }}
-        >
+        <span className={"subText"} style={{ color: buttonStyle.color }}>
           {text}
         </span>
         {icon && iconPosition === "right" && (

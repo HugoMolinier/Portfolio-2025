@@ -1,6 +1,6 @@
 import React from "react";
 
-const sectionStyle = { paddingTop: 80 };
+const sectionStyle = { paddingTop: 52 };
 const imageStyle = { borderRadius: 8, height: "auto", width: "25%" };
 const imgContainerStyle = { display: "flex", padding: "8px 5%", gap: "10%" };
 
@@ -10,7 +10,7 @@ const EngiePage = () => (
       <p>
         Dans le cadre de ma 3ᵉ année de BUT Informatique, j’ai effectué un stage
         de 12 semaines chez ENGIE Digital, au sein de l’équipe
-        <strong>VIANEO</strong>, spécialisée dans les solutions de recharge
+        <strong> VIANEO</strong>, spécialisée dans les solutions de recharge
         électrique pour véhicules.
       </p>
       <p>
@@ -128,7 +128,7 @@ const EngiePage = () => (
               src="/image/engie/image3.png"
               width="80%"
               style={{ borderRadius: 8 }}
-              alt="Aperçu du projet ENGIE"
+              alt="Aperçu composant figma boutton"
             />
           </li>
         </ul>
@@ -165,17 +165,17 @@ const EngiePage = () => (
             <div style={imgContainerStyle}>
               <img
                 src="/image/engie/engie_bottom.png"
-                alt="BottomSheet 1"
                 style={imageStyle}
+                alt="Aperçu bottomsheet 1 "
               />
               <img
                 src="/image/engie/engie_bottom2.png"
-                alt="BottomSheet 2"
+                alt="Aperçu bottomsheet 2 "
                 style={imageStyle}
               />
               <img
                 src="/image/engie/engie_bottom3.png"
-                alt="BottomSheet 3"
+                alt="Aperçu bottomsheet 3 "
                 style={imageStyle}
               />
             </div>
@@ -220,17 +220,17 @@ const EngiePage = () => (
             <div style={imgContainerStyle}>
               <img
                 src="/image/engie/engie_dark1.png"
-                alt="Dark Mode 1"
+                alt="Apercu implémentation Dark Mode 1"
                 style={imageStyle}
               />
               <img
                 src="/image/engie/engie_dark2.png"
-                alt="Dark Mode 2"
+                alt="Apercu implémentation Dark Mode 2"
                 style={imageStyle}
               />
               <img
                 src="/image/engie/engie_dark3.png"
-                alt="Dark Mode 3"
+                alt="Apercu implémentation Dark Mode 3"
                 style={imageStyle}
               />
             </div>
@@ -326,6 +326,59 @@ const EngiePage = () => (
             développement).
           </p>
         </article>
+      </div>
+    </section>
+    <section id="lien" style={sectionStyle}>
+      <header style={{ marginBottom: 20 }}>
+        <h2>Lien</h2>
+      </header>
+      <div
+        style={{
+          gap: "24px",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <a
+          href="https://play.google.com/store/apps/details?id=com.engie.vianeo&hl=fr"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "16px",
+            textDecoration: "none",
+          }}
+        >
+          <img
+            src="/image/icons/other/Google_Play.svg"
+            alt="GooglePlay"
+            style={{ width: 28, height: 28 }}
+          />
+          <span className="subtextBoldlink" style={{ fontSize: "14px" }}>
+            Lien GooglePlay Engie Vianeo
+          </span>
+        </a>
+        <a
+          href="https://apps.apple.com/fr/app/engie-vianeo-bornes-recharge/id6449452500"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "16px",
+            textDecoration: "none",
+          }}
+        >
+          <img
+            src="/image/icons/other/App_Store.svg"
+            alt="AppStore"
+            style={{ width: 28, height: 28 }}
+          />
+          <span className="subtextBoldlink" style={{ fontSize: "14px" }}>
+            Lien AppStore Engie Vianeo
+          </span>
+        </a>
       </div>
     </section>
   </main>

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Button from "@component/ui/Button/Button";
 
 export default function footer() {
   return (
@@ -9,7 +8,7 @@ export default function footer() {
       style={{
         maxWidth: "960px",
         margin: "0 auto",
-
+        width: "90%",
         padding: "40px 0px 60px 0",
 
         gap: "20px",
