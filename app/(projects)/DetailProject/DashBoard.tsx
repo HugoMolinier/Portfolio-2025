@@ -142,6 +142,17 @@ const Dashboard = () => {
           meilleure ergonomie mobile avec un affichage responsive adapté aux
           différents supports.
         </p>
+        <p>
+          Lors de la réalisation de ce portfolio, j'ai légèrement retouché
+          certains aspects du design du Dashboard, mais je ne suis pas allé plus
+          loin. Voici la capture de l'ancien design, réalisé en mars 2024.
+        </p>
+        <img
+          src="/image/Dashboard/old_dark_dashboard.png"
+          width="100%"
+          style={{ borderRadius: 8, margin: 8 }}
+          alt="Dashboard Presentation"
+        />
       </section>
       <section id="apprentissage" style={sectionStyle}>
         <header style={{ marginBottom: 20 }}>
