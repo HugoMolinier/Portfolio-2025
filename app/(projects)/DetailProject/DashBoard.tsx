@@ -122,6 +122,12 @@ const Dashboard = () => {
           système.
         </p>
         <img
+          src="/image/Dashboard/light_dashboard.png"
+          width="100%"
+          style={{ borderRadius: 8, margin: 8 }}
+          alt="Dashboard Presentation"
+        />
+        <img
           src="/image/Dashboard/dark_dashboard.png"
           width="100%"
           style={{ borderRadius: 8, margin: 8 }}
